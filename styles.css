@@ -1,26 +1,35 @@
 body {
     font-family: Arial, sans-serif;
-    color: #333;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    margin-right: 120px;
+    margin-left: 120px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
-header {
-    background-color: #024959;
-    color: #fff;
-    padding: 10px 20px;
+#about {
     text-align: center;
+    /* Centers text within the section */
+    margin: auto;
+    padding: 20px;
 }
 
+#about h2,
+#about h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Adjust the navigation bar padding */
 nav ul {
     list-style-type: none;
-    padding: 0;
+    text-align: center;
+    /* Center align the navigation links */
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 5%;
 }
 
 nav ul li a {
@@ -28,10 +37,61 @@ nav ul li a {
     text-decoration: none;
 }
 
-main {
-    padding: 20px;
+/* Header adjustments */
+header {
+    background-color: #024959;
+    color: #fff;
     text-align: center;
+    padding: 20px;
 }
+
+/* Footer adjustments */
+footer {
+    background-color: #022b30;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Image example grid style*/
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Always three columns */
+    /* Adapts number of columns based on screen width, min 300px */
+    gap: 20px;
+}
+
+.image-item {
+    position: relative;
+    width: 100%;
+    padding-top: 66.66%;
+    /* Aspect ratio of 3:2 */
+    overflow: hidden;
+}
+
+.image-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the area without distorting the aspect ratio */
+}
+
+.image-item p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    margin: 0;
+}
+
 
 footer {
     background-color: #022b30;
@@ -53,10 +113,6 @@ footer nav ul li a {
 #access {
     text-align: center;
     /* This will center the text and buttons within the section */
-}
-
-.buttons {
-    /* Keeps the button alignment to center */
 }
 
 .button {
@@ -99,4 +155,42 @@ footer nav ul li a {
 
 .harvard:hover {
     background-color: #750026;
+}
+
+#sponsors {
+    padding: 20px;
+    text-align: center;
+    /* Centering the text within the section */
+}
+
+
+#contact {
+    background-color: #f0f4f8;
+    /* Light background to make the text stand out */
+    padding: 20px;
+    text-align: center;
+    /* Centering the text within the section */
+}
+
+#contact ul {
+    list-style: none;
+    /* Removes bullet points from the list */
+    padding: 0;
+}
+
+#contact li {
+    margin: 10px 0;
+    /* Spacing between items */
+}
+
+#contact a {
+    color: #0061ff;
+    /* Color for links, matching the site theme */
+    text-decoration: none;
+    /* Removes underline from links */
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    /* Adds underline on hover for better interaction feedback */
 }
