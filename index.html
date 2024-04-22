@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Wake Vision</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Hello World!</h1>
+    <header>
+        <h1>Wake Vision</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About the Dataset</a></li>
+                <li><a href="#access">Access the Dataset</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="home">
+        <h2>Welcome to Wake Vision</h2>
+        <p>"Wake Vision" is a large, high-quality dataset featuring over 6 million images, significantly exceeding the
+            scale and diversity of current tinyML datasets (100x). This dataset includes images with annotations of
+            whether each image contains a person. Additionally, it incorporates a comprehensive fine-grained benchmark
+            to assess fairness and robustness, covering perceived gender, perceived age, subject distance, lighting
+            conditions, and depictions. Hosted on Harvard Dataverse, it provides images, CSV files, and code to generate
+            a Wake Vision TensorFlow Dataset. Annotations are published under a CC BY 4.0 license, and all images are
+            sourced from the Open Images v7 dataset under a CC BY 2.0 license.</p>
+        <!-- Example image to visually represent the dataset -->
+        <img src="example-dataset.jpg" alt="Example image from Wake Vision dataset">
+    </main>
+    <section id="access">
+        <h2>Access the Dataset</h2>
+        <p>Choose your preferred source to download or access the Wake Vision dataset:</p>
+        <div class="buttons">
+            <a href="https://www.tensorflow.org/datasets/catalog/wake_vision" class="button tensorflow">TensorFlow
+                Datasets</a>
+            <a href="https://huggingface.co/datasets/wake_vision" class="button huggingface">Hugging Face Datasets</a>
+            <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=wake_vision" class="button harvard">Raw
+                Dataset at Harvard Dataverse</a>
+        </div>
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#access">Access</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Optional social media links -->
+        <p>© 2024 Wake Vision</p>
+    </footer>
 </body>
+
 </html>

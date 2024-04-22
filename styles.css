@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #024959;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #022b30;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+footer nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#access {
+    text-align: center;
+    /* This will center the text and buttons within the section */
+}
+
+.buttons {
+    /* Keeps the button alignment to center */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.tensorflow {
+    background-color: #ff6f00;
+    /* TensorFlow orange */
+}
+
+.tensorflow:hover {
+    background-color: #cc5800;
+}
+
+.huggingface {
+    background-color: #0061ff;
+    /* Hugging Face blue */
+}
+
+.huggingface:hover {
+    background-color: #0047cc;
+}
+
+.harvard {
+    background-color: #a10035;
+    /* Harvard crimson */
+}
+
+.harvard:hover {
+    background-color: #750026;
+}
