@@ -60,6 +60,8 @@ footer {
     /* Always three columns */
     /* Adapts number of columns based on screen width, min 300px */
     gap: 20px;
+    justify-content: center;
+    /* Centers the grid within the section */
 }
 
 .image-item {
@@ -90,6 +92,31 @@ footer {
     font-size: 1em;
     text-align: center;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #about h2,
+    #about h3 {
+        font-size: 1.5em;
+    }
+
+    .image-item {
+        padding-top: 75%;
+        /* Adjust aspect ratio padding for smaller screens if necessary */
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 
