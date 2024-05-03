@@ -166,6 +166,24 @@ footer nav ul li a {
     opacity: 0.8;
 }
 
+.arxiv {
+    background-color: #FFBF00;
+    /* Amber */
+}
+
+.arxiv:hover {
+    background-color: #FFBF00;
+}
+
+.quickstart {
+    background-color: #228B22;
+    /* Forest Green */
+}
+
+.quickstart:hover {
+    background-color: #5F8575;
+}
+
 .tensorflow {
     background-color: #ff6f00;
     /* TensorFlow orange */
