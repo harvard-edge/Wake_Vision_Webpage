@@ -10,7 +10,6 @@
 
 <body>
     <header>
-        <h1>Wake Vision</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -21,6 +20,13 @@
             </ul>
         </nav>
     </header>
+    <!-- <section>
+        <center>
+            <div class="row">
+                <img class="img-responsive center-block" src="wake_vision_logo.png" height="400"/>
+            </div>
+        </center>
+    </section> -->
     <section id="access">
         <h2>Access the Dataset</h2>
         <p>Get started using the dataset from your preferred source:</p>
@@ -38,14 +44,13 @@
     </section>
     <main id="about">
         <h2>About</h2>
-        <p>"Wake Vision" is a large, high-quality dataset featuring over 6 million images, significantly exceeding the
-            scale and diversity of current tinyML datasets (100x). This dataset includes images with annotations of
-            whether each image contains a person. Additionally, it incorporates a comprehensive fine-grained benchmark
-            to assess fairness and robustness, covering perceived gender, perceived age, subject distance, lighting
-            conditions, and depictions. Hosted on Harvard Dataverse, it provides images, CSV files, and code to generate
-            a Wake Vision TensorFlow Dataset. Annotations are published under a CC BY 4.0 license, and all images are
-            sourced from the Open Images v7 dataset under a CC BY 2.0 license.</p>
-        <!-- <section id="featured-image">
+        <p>
+            "Wake Vision" is a large, high-quality dataset featuring over 6 million images, significantly exceeding the scale and diversity of current tinyML datasets (100x). This dataset includes images with annotations of whether each image contains a person. Additionally, it incorporates a comprehensive fine-grained benchmark to assess fairness and robustness, covering perceived gender, perceived age, subject distance, lighting conditions, and depictions.
+        </p>
+        <p>
+            The Wake Vision labels are derived from Open Image's annotations which are licensed by Google LLC under CC BY 4.0 license. The images are listed as having a CC BY 2.0 license. Note from Open Images: "while we tried to identify images that are licensed under a Creative Commons Attribution license, we make no representations or warranties regarding the license status of each image and you should verify the license for each image yourself."
+        </p>
+            <!-- <section id="featured-image">
             <img src="related_work_table.png"
                 alt="Table summarizing related datasets. Important takeaways are that Wake Vision is larger and includes more features than other datasets meant for tinyML"
                 style="width: 60%; height: auto;">
