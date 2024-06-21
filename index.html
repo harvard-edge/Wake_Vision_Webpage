@@ -25,6 +25,16 @@
             margin: 0 auto;
             padding: 20px;
         }
+        .contact {
+            flex: 1;
+            display: flex;
+        }
+        .logo-container {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            min-width: 300px;
+        }
         header {
             background-color: var(--header-bg);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -209,7 +219,7 @@
                 <ul>
                     <li>Over 6 million high-quality images</li>
                     <li>Two training sets (Large & Quality)</li>
-                    <li>High quality validation and test sets</li>
+                    <li>High quality validation and test sets (~2% Label Error Rate)</li>
                 </ul>
             </div>
 
@@ -242,7 +252,7 @@
             </div>
             <div class="feature-item fade-in">
                 <h3>Two Training Sets</h3>
-                <p>Ideal foundation for data-centric AI research</p>
+                <p>One large and one high quality, ideal for data-centric AI research</p>
             </div>
             <div class="feature-item fade-in">
                 <h3>Diverse Scenarios</h3>
@@ -274,9 +284,27 @@
         <p class="fade-in">The Wake Vision labels are derived from Open Image's annotations which are licensed by Google LLC under CC BY 4.0 license. The images are listed as having a CC BY 2.0 license. Note from Open Images: "while we tried to identify images that are licensed under a Creative Commons Attribution license, we make no representations or warranties regarding the license status of each image and you should verify the license for each image yourself."</p>
 
         <h2></h2>
-        <h2 class="fade-in">Contact</h2>
-        <p class="fade-in">Email: <a href="mailto:emjn@dtu.dk">emjn@dtu.dk</a>
-            <a href="mailto:cbanbury@g.harvard.edu">cbanbury@g.harvard.edu</a></p>
+        <h2>Cite</h2>
+        <section id="cite" class="section">
+            <pre>@article{banbury2024wake,
+title={Wake Vision: A Large-scale, Diverse Dataset and Benchmark Suite for TinyML Person Detection},
+author={Banbury, Colby and Njor, Emil and Stewart, Matthew and Warden, Pete and Kudlur, Manjunath
+and Jeffries, Nat and Fafoutis, Xenofon and Reddi, Vijay Janapa},
+journal={arXiv preprint arXiv:2405.00892},
+year={2024}
+}</pre>
+          </section>
+          <h2></h2>
+          <div class="contact">
+            <div>
+                <h2 class="fade-in">Contact</h2>
+                <p class="fade-in">Email: <a href="mailto:emjn@dtu.dk">emjn@dtu.dk</a>
+                    <a href="mailto:cbanbury@g.harvard.edu">cbanbury@g.harvard.edu</a></p>
+            </div>
+            <div class="logo-container">
+                <img src="Harvard_SEAS.png" alt="Harvard SEAS Logo" class="logo">
+            </div>
+        </div>
 
     </main>
     
