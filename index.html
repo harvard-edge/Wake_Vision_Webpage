@@ -1,122 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wake Vision</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Wake Vision Dataset</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #8BC34A;
+            --background-color: #E8F5E9;
+            --text-color: #333;
+            --header-bg: #F1F8E9;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--header-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .title-container {
+            flex: 1;
+            min-width: 300px;
+        }
+        .logo-container {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            min-width: 300px;
+        }
+        .logo {
+            max-height: 160px;
+            width: auto;
+        }
+        h1, h2 {
+            color: var(--primary-color);
+            margin: 0 0 15px 0;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        .sections-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .section {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.4s; }
+        .fade-in:nth-child(4) { animation-delay: 0.6s; }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .title-container, .logo-container {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+        .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+        }
+        .image-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+        }
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .image-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+    </style>
 </head>
-
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#access">Access</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#sponsors">Sponsors</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="header-content">
+                <div class="title-container">
+                    <h1>Wake Vision Dataset</h1>
+                    <div class="fade-in">
+                        <a href="https://github.com/colbybanbury/Wake_Vision_Quickstart" class="button">Quick Start Guide</a>
+                        <a href="https://arxiv.org/abs/2405.00892" class="button">Read the Paper</a>
+                        <a href="#access" class="button">Access the Dataset</a>
+                    </div>
+                </div>
+                <div class="logo-container">
+                    <img src="wake_vision_logo.png" alt="Wake Vision Logo" class="logo">
+                </div>
+            </div>
+        </div>
     </header>
-    <section>
-        <center>
-            <div class="row">
-                <img class="img-responsive center-block" src="wake_vision_logo.png" height="400"/>
+    
+    <main class="container">
+        <div class="sections-container">
+            <div class="section fade-in">
+                <h2>The Dataset</h2>
+                <p>Wake Vision is a large, high-quality binary image classifcation dataset for person detection:</p>
+                <ul>
+                    <li>Over 6 million high-quality images</li>
+                    <li>Two training sets (Large & Quality)</li>
+                    <li>High quality validation and test sets</li>
+                </ul>
             </div>
-        </center>
-    </section>
-    <section id="access">
-        <h2>Access the Dataset</h2>
-        <p>Get started using the dataset from your preferred source:</p>
-        <div class="buttons">
-            <a href="https://github.com/colbybanbury/Wake_Vision_Quickstart" class="button quickstart">Quickstart</a>
-            <a href="https://arxiv.org/abs/2405.00892" class="button arxiv">arXiv</a>
-            <a href="https://github.com/Ekhao/datasets/tree/wake_vision" class="button tensorflow">TensorFlow
-                Datasets</a>
-            <a href="https://huggingface.co/datasets/Harvard-Edge/Wake-Vision" class="button huggingface">Hugging Face
-                Datasets</a>
-            <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/1HOPXC"
-                class="button harvard">Raw
-                Dataset at Harvard Dataverse</a>
+
+            <div class="section fade-in">
+                <h2>Fine-Grain Benchmark Suite</h2>
+                <p>Wake Vision also incorporates a comprehensive fine-grained benchmark to assess fairness and robustness across:</p>
+                <ul>
+                    <li>Perceived gender</li>
+                    <li>Perceived age</li>
+                    <li>Subject distance</li>
+                    <li>Lighting conditions</li>
+                    <li>Depictions (e.g., drawings, digital renderings)</li>
+                </ul>
+            </div>
         </div>
-    </section>
-    <main id="about">
-        <h2>About</h2>
-        <p>
-            "Wake Vision" is a large, high-quality dataset featuring over 6 million images, significantly exceeding the scale and diversity of current tinyML datasets (100x). This dataset includes images with annotations of whether each image contains a person. Additionally, it incorporates a comprehensive fine-grained benchmark to assess fairness and robustness, covering perceived gender, perceived age, subject distance, lighting conditions, and depictions.
-        </p>
-        <p>
-            The Wake Vision labels are derived from Open Image's annotations which are licensed by Google LLC under CC BY 4.0 license. The images are listed as having a CC BY 2.0 license. Note from Open Images: "while we tried to identify images that are licensed under a Creative Commons Attribution license, we make no representations or warranties regarding the license status of each image and you should verify the license for each image yourself."
-        </p>
-            <!-- <section id="featured-image">
-            <img src="related_work_table.png"
-                alt="Table summarizing related datasets. Important takeaways are that Wake Vision is larger and includes more features than other datasets meant for tinyML"
-                style="width: 60%; height: auto;">
-        </section> -->
-        <h3>Diverse Examples</h3>
+        
+        <h2 class="fade-in">About Wake Vision</h2>
+        <p class="fade-in">Wake Vision is a state-of-the-art person detection dataset specifically created for TinyML applications. It provides a comprehensive collection of high-quality images and precise annotations to train and evaluate machine learning models for efficient person detection on embedded and edge devices.</p>
+        
+        <h2 id="access" class="fade-in">Access The Dataset</h2>
+        <div class="fade-in">
+            <a href="https://huggingface.co/datasets/Harvard-Edge/Wake-Vision" class="button">HuggingFace</a>
+            <a href="https://github.com/Ekhao/datasets/tree/wake_vision" class="button">TensorFlow Datasets</a>
+            <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/1HOPXC" class="button">Download Directly</a>
+        </div>
+
+        <h2 class="fade-in">Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-item fade-in">
+                <h3>TinyML Focus</h3>
+                <p>TinyML relevant usescase and tractable task.</p>
+            </div>
+            <div class="feature-item fade-in">
+                <h3>Two Training Sets</h3>
+                <p>Ideal foundation for data-centric AI research</p>
+            </div>
+            <div class="feature-item fade-in">
+                <h3>Diverse Scenarios</h3>
+                <p>Wide range of person detection use cases</p>
+            </div>
+            <div class="feature-item fade-in">
+                <h3>High-Quality Test and Val</h3>
+                <p>Manually labeled to ensure reliable evaluation</p>
+            </div>
+        </div>
+        <h2></h2>
+        <h2 class="fade-in">Example Images</h2>
         <div class="image-grid">
-            <div class="image-item">
-                <img src="older_person.png" alt="Older Person">
-                <p>Older Person</p>
-            </div>
-            <div class="image-item">
-                <img src="near_person.png" alt="Near Person">
-                <p>Near Person</p>
-            </div>
-            <div class="image-item">
-                <img src="bright_image.png" alt="Bright Image">
-                <p>Bright Image</p>
-            </div>
-            <div class="image-item">
+            <div class="image-item fade-in">
                 <img src="female_person.png" alt="Predominantly Female Person">
-                <p>Predominantly Female Person</p>
             </div>
-            <div class="image-item">
+            <div class="image-item fade-in">
+                <img src="bright_image.png" alt="Bright Image">
+            </div>
+            <div class="image-item fade-in">
                 <img src="depiction_person.png" alt="Depicted Person">
-                <p>Depicted Person</p>
             </div>
-            <div class="image-item">
+            <div class="image-item fade-in">
                 <img src="young_person.png" alt="Young Person">
-                <p>Young Person</p>
             </div>
         </div>
+        <h2></h2>
+        <h2 class="fade-in">License</h2>
+        <p class="fade-in">The Wake Vision labels are derived from Open Image's annotations which are licensed by Google LLC under CC BY 4.0 license. The images are listed as having a CC BY 2.0 license. Note from Open Images: "while we tried to identify images that are licensed under a Creative Commons Attribution license, we make no representations or warranties regarding the license status of each image and you should verify the license for each image yourself."</p>
+
+        
     </main>
-    <section id="sponsors">
-        <h2>Seeking Sponsors</h2>
-        <p>We are currently seeking sponsors to support the ongoing development and expansion of the Wake Vision
-            dataset. If you are interested in contributing and becoming a part of this innovative project, please
-            contact us for more information on how you can help shape the future of TinyML research.</p>
-
-        <div class="row">
-            <img class="img-responsive center-block" src="Harvard_SEAS.png"/>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or need further information, please feel free to reach out to us at the following
-            email addresses:</p>
-        <ul>
-            <li>Email: <a href="mailto:emjn@dtu.dk">emjn@dtu.dk</a></li>
-            <li>Email: <a href="mailto:cbanbury@g.harvard.edu">cbanbury@g.harvard.edu</a></li>
-        </ul>
-    </section>
-
+    
     <footer>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#access">Access</a></li>
-                <li><a href="#sponsors">Sponsors</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Optional social media links -->
-        <p>© 2024 Wake Vision</p>
+        <div class="container">
+            <p>&copy; 2024 Wake Vision Dataset. All rights reserved.</p>
+        </div>
     </footer>
 </body>
-
 </html>

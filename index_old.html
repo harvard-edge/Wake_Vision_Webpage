@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wake Vision</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#access">Access</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <center>
+            <div class="row">
+                <img class="img-responsive center-block" src="wake_vision_logo.png" height="400"/>
+            </div>
+        </center>
+    </section>
+    <section id="access">
+        <h2>Access the Dataset</h2>
+        <p>Get started using the dataset from your preferred source:</p>
+        <div class="buttons">
+            <a href="https://github.com/colbybanbury/Wake_Vision_Quickstart" class="button quickstart">Quickstart</a>
+            <a href="https://arxiv.org/abs/2405.00892" class="button arxiv">arXiv</a>
+            <a href="https://github.com/Ekhao/datasets/tree/wake_vision" class="button tensorflow">TensorFlow
+                Datasets</a>
+            <a href="https://huggingface.co/datasets/Harvard-Edge/Wake-Vision" class="button huggingface">Hugging Face
+                Datasets</a>
+            <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/1HOPXC"
+                class="button harvard">Raw
+                Dataset at Harvard Dataverse</a>
+        </div>
+    </section>
+    <main id="about">
+        <h2>About</h2>
+        <p>
+            "Wake Vision" is a large, high-quality dataset featuring over 6 million images, significantly exceeding the scale and diversity of current tinyML datasets (100x). This dataset includes images with annotations of whether each image contains a person. Additionally, it incorporates a comprehensive fine-grained benchmark to assess fairness and robustness, covering perceived gender, perceived age, subject distance, lighting conditions, and depictions.
+        </p>
+        <p>
+            The Wake Vision labels are derived from Open Image's annotations which are licensed by Google LLC under CC BY 4.0 license. The images are listed as having a CC BY 2.0 license. Note from Open Images: "while we tried to identify images that are licensed under a Creative Commons Attribution license, we make no representations or warranties regarding the license status of each image and you should verify the license for each image yourself."
+        </p>
+            <!-- <section id="featured-image">
+            <img src="related_work_table.png"
+                alt="Table summarizing related datasets. Important takeaways are that Wake Vision is larger and includes more features than other datasets meant for tinyML"
+                style="width: 60%; height: auto;">
+        </section> -->
+        <h3>Diverse Examples</h3>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="older_person.png" alt="Older Person">
+                <p>Older Person</p>
+            </div>
+            <div class="image-item">
+                <img src="near_person.png" alt="Near Person">
+                <p>Near Person</p>
+            </div>
+            <div class="image-item">
+                <img src="bright_image.png" alt="Bright Image">
+                <p>Bright Image</p>
+            </div>
+            <div class="image-item">
+                <img src="female_person.png" alt="Predominantly Female Person">
+                <p>Predominantly Female Person</p>
+            </div>
+            <div class="image-item">
+                <img src="depiction_person.png" alt="Depicted Person">
+                <p>Depicted Person</p>
+            </div>
+            <div class="image-item">
+                <img src="young_person.png" alt="Young Person">
+                <p>Young Person</p>
+            </div>
+        </div>
+    </main>
+    <section id="sponsors">
+        <h2>Seeking Sponsors</h2>
+        <p>We are currently seeking sponsors to support the ongoing development and expansion of the Wake Vision
+            dataset. If you are interested in contributing and becoming a part of this innovative project, please
+            contact us for more information on how you can help shape the future of TinyML research.</p>
+
+        <div class="row">
+            <img class="img-responsive center-block" src="Harvard_SEAS.png"/>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need further information, please feel free to reach out to us at the following
+            email addresses:</p>
+        <ul>
+            <li>Email: <a href="mailto:emjn@dtu.dk">emjn@dtu.dk</a></li>
+            <li>Email: <a href="mailto:cbanbury@g.harvard.edu">cbanbury@g.harvard.edu</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#access">Access</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Optional social media links -->
+        <p>© 2024 Wake Vision</p>
+    </footer>
+</body>
+
+</html>
