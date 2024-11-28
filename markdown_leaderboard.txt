@@ -1,12 +1,12 @@
-| Model Name (.tflite)                                                                             | Input Size  | RAM (KiB) | Flash (KiB) | MACs (MM)  | Test Accuracy (Quality) |
-| :----------------------------------------------------------------------------------------------: | :---------: | :-------: | :---------: | :--------: | :---------: |
-| [MobileNetV2_0.25](https://keras.io/api/applications/mobilenet/)                                 | (224,224,3) | 1,244.5   | 410.55      | 36,453,732 | 84.9 ± 0.11 |
-| [10fps_vww](https://github.com/mit-han-lab/mcunet/blob/master/mcunet/model_zoo.py)               | (64,64,3)   | 168.5     | 533.84      | 5,998,334  | 81.7 ± 0.28 |
-| [5fps_vww](https://github.com/mit-han-lab/mcunet/blob/master/mcunet/model_zoo.py)                | (80,80,3)   | 226.5     | 624.55      | 11,645,502 | 82.9 ± 0.29 |
-| [320kb-1mb_vww](https://github.com/mit-han-lab/mcunet/blob/master/mcunet/model_zoo.py)           | (144,144,3) | 393       | 923.76      | 56,022,934 | 85.6 ± 0.34 |
-| [vww2_50_50_INT8](https://github.com/ARM-software/ML-zoo/tree/master/models/visual_wake_words)   | (50,50,1)   | 71.50     | 225.54      | 3,167,382  | 71.9 ± 0.67 |
-| [vww3_128_128_INT8](https://github.com/ARM-software/ML-zoo/tree/master/models/visual_wake_words) | (128,128,1) | 137.50    | 463.73      | 22,690,291 | 77.8 ± 0.56 |
-| [vww4_128_128_INT8](https://github.com/ARM-software/ML-zoo/tree/master/models/visual_wake_words) | (128,128,1) | 123.50    | 417.03      | 18,963,302 | 77.9 ± 0.6  |
-| [k_2_c_3](https://github.com/AndreaMattiaGaravagno/ColabNAS/tree/main/models)                    | (50,50,3)   | 18.5      | 7.66        | 250,256    | 70.6 ± 0.96 |
-| [k_4_c_5](https://github.com/AndreaMattiaGaravagno/ColabNAS/tree/main/models)                    | (50,50,3)   | 22        | 18.49       | 688,790    | 75.7 ± 0.18 |
-| [k_8_c_5](https://github.com/AndreaMattiaGaravagno/ColabNAS/tree/main/models)                    | (50,50,3)   | 32.5      | 44.56       | 2,135,476  | 77.3 ± 0.37 |
+| Model Name (.tflite)                                                                                      | Input Size  | RAM (KiB) | Flash (KiB) | MACs (MM)  | Test Accuracy|
+| :----------------------------------------------------------------------------------------------:          | :---------: | :-------: | :---------: | :--------: | :----------: |
+| [mcunet-320kb-1mb_vww](https://github.com/mit-han-lab/mcunet/blob/master/mcunet/model_zoo.py)             | (144,144,3) | 393       | 923.76      | 56,022,934 | 85.6±0.34%   |
+| [MobileNetV2_0.25](https://keras.io/api/applications/mobilenet/)                                          | (224,224,3) | 1,244.5   | 410.55      | 36,453,732 | 84.9±0.11%   |
+| [mcunet-5fps_vww](https://github.com/mit-han-lab/mcunet/blob/master/mcunet/model_zoo.py)                  | (80,80,3)   | 226.5     | 624.55      | 11,645,502 | 82.9±0.29%   |
+| [mcunet-10fps_vww](https://github.com/mit-han-lab/mcunet/blob/master/mcunet/model_zoo.py)                 | (64,64,3)   | 168.5     | 533.84      | 5,998,334  | 81.7±0.28%   |
+| [micronet_vww4_128_128_INT8](https://github.com/ARM-software/ML-zoo/tree/master/models/visual_wake_words) | (128,128,1) | 123.50    | 417.03      | 18,963,302 | 77.9±0.6%    |
+| [micronet_vww3_128_128_INT8](https://github.com/ARM-software/ML-zoo/tree/master/models/visual_wake_words) | (128,128,1) | 137.50    | 463.73      | 22,690,291 | 77.8±0.56%   |
+| [colabnask_8_c_5](https://github.com/AndreaMattiaGaravagno/ColabNAS/tree/main/models)                     | (50,50,3)   | 32.5      | 44.56       | 2,135,476  | 77.3±0.37%   |
+| [colabnask_4_c_5](https://github.com/AndreaMattiaGaravagno/ColabNAS/tree/main/models)                     | (50,50,3)   | 22        | 18.49       | 688,790    | 75.7±0.18%   |
+| [micronet_vww2_50_50_INT8](https://github.com/ARM-software/ML-zoo/tree/master/models/visual_wake_words)   | (50,50,1)   | 71.50     | 225.54      | 3,167,382  | 71.9±0.67%   |
+| [colabnas_k_2_c_3](https://github.com/AndreaMattiaGaravagno/ColabNAS/tree/main/models)                    | (50,50,3)   | 18.5      | 7.66        | 250,256    | 70.6±0.96%   |
