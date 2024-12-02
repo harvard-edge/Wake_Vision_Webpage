@@ -35,26 +35,24 @@
             justify-content: flex-end;
             min-width: 300px;
         }
+                
         .leaderboard-container {
             background-color: white;
-            padding: 10px 20px; /* Reduce padding to fit content */
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin: 20px auto; /* Center the container */
-            max-width: 1000px; /* Restrict maximum width */
-            width: 100%; /* Ensure responsive sizing */
-            overflow: hidden; /* Prevent content overflow */
-            box-sizing: border-box; /* Include padding in width calculation */
+            padding: 0; /* Remove extra padding */
+            display: inline-block; /* Shrink-wrap the container around the table */
         }
         
         .leaderboard-container table {
-            width: 100%; /* Ensure table fills the container */
-            border-collapse: collapse; /* Remove cell spacing */
+            border-collapse: collapse; /* Remove extra spacing */
+            margin: 0; /* Remove default margins */
         }
         
         .leaderboard-container th,
         .leaderboard-container td {
-            padding: 10px; /* Add consistent padding for cells */
+            padding: 10px 15px; /* Add padding inside the cells */
             text-align: center;
         }
         
@@ -65,9 +63,11 @@
         }
         
         .leaderboard-container td {
-            border-bottom: 1px solid #eee; /* Add row dividers */
+            border-bottom: 1px solid #eee; /* Add subtle row dividers */
         }
-                @media (max-width: 768px) {
+
+        
+        @media (max-width: 768px) {
             .contact {
                 flex-direction: column;
                 align-items: center;
@@ -308,8 +308,7 @@
             </div>
         </div>
                 <h2></h2>
-
-        
+                
         <a class="anchor" id="leaderboard"></a>
         <h2 class="fade-in">Leaderboard</h2>
         <div class="leaderboard-container fade-in">
