@@ -29,61 +29,78 @@
          flex: 1;
          display: flex;
          }
+         /* Logo container with better alignment and responsive behavior */
          .logo-container {
-         flex: 1;
          display: flex;
          justify-content: flex-end;
+         align-items: center; /* Ensure vertical alignment for logos */
+         flex: 1;
          min-width: 300px;
+         padding: 10px; /* Add some spacing around the logo */
          }
-         /* Leaderboard container with curved corners */
+         /* Leaderboard container with enhanced styles and shadow */
          .leaderboard-container {
-         max-width: 1200px; /* Restrict the width */
-         margin: 0 auto; /* Center the table */
-         overflow: hidden; /* Prevent content overflow from breaking curved corners */
-         border-radius: 10px; /* Apply rounded corners only to the container */
-         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
-         background-color: white; /* Ensure the container background is white */
+         max-width: 1200px; /* Limit container width */
+         margin: 20px auto; /* Center and add vertical spacing */
+         overflow-x: auto; /* Allow horizontal scrolling for responsiveness */
+         border-radius: 12px; /* Slightly more rounded corners */
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+         background-color: #fff; /* Ensure consistent white background */
+         padding: 0; /* Remove padding for seamless table display */
+         border: 1px solid #ddd; /* Add a subtle border for better definition */
          }
-         /* Reset rows to have sharp corners */
-         .leaderboard-container tr {
-         border-radius: 0 !important; /* Ensure rows/cells have no rounding */
-         }
-         /* Styling for the table */
+         /* Table within leaderboard container */
          .leaderboard-container table {
-         width: 100%; /* Make the table fill the container */
-         border-collapse: collapse; /* Remove extra spacing */
-         border-spacing: 0; /* Ensure no gaps between table cells */
-         background-color: white; /* Keep the table's background white */
+         width: 100%; /* Ensure table fills container */
+         border-collapse: collapse; /* Avoid spacing between cells */
+         text-align: center; /* Align text centrally */
+         background-color: #fff; /* Keep table background consistent */
          }
          /* Table headers and cells */
          .leaderboard-container th,
          .leaderboard-container td {
-         padding: 10px 15px; /* Add spacing inside cells */
-         border-bottom: 1px solid #eee; /* Add subtle row dividers */
-         text-align: center; /* Center-align text */
-         background-color: white; /* Ensure all cells are white */
+         padding: 12px 16px; /* Add comfortable padding for better readability */
+         border-bottom: 1px solid #eee; /* Subtle divider between rows */
+         word-wrap: break-word; /* Ensure content wraps in smaller screens */
          }
-         /* Styling for header cells */
+         /* Header styling */
          .leaderboard-container th {
-         background-color: #f9f9f9; /* Light gray for headers */
-         font-weight: bold;
-         border-bottom: 2px solid #ddd; /* Add a more pronounced divider under headers */
+         background-color: #f7f7f7; /* Soft background color for headers */
+         font-weight: 600; /* Slightly bolder for emphasis */
+         border-bottom: 2px solid #ccc; /* Pronounced divider for header row */
+         color: #333; /* Use darker color for better contrast */
+         text-transform: uppercase; /* Make headers stand out */
          }
-         /* First and last cells in header rows for curved corners */
+         /* Rounded corners for the first and last cells in header and footer rows */
          .leaderboard-container th:first-child {
-         border-top-left-radius: 10px; /* Round top-left corner */
+         border-top-left-radius: 12px;
          }
          .leaderboard-container th:last-child {
-         border-top-right-radius: 10px; /* Round top-right corner */
+         border-top-right-radius: 12px;
          }
-         /* First and last cells in the last row for bottom corners */
          .leaderboard-container tr:last-child td:first-child {
-         border-bottom-left-radius: 10px; /* Round bottom-left corner */
+         border-bottom-left-radius: 12px;
          }
          .leaderboard-container tr:last-child td:last-child {
-         border-bottom-right-radius: 10px; /* Round bottom-right corner */
+         border-bottom-right-radius: 12px;
+         }
+         /* Add hover effect for rows */
+         .leaderboard-container tr:hover {
+         background-color: #f5f5f5; /* Subtle highlight for row on hover */
          }
          @media (max-width: 768px) {
+         .leaderboard-container table {
+         font-size: 14px; /* Reduce font size for smaller screens */
+         }
+         .leaderboard-container th,
+         .leaderboard-container td {
+         padding: 10px 8px; /* Adjust padding for compact view */
+         }
+         /* Hide all middle columns, keeping only the first and last */
+         .leaderboard-container td:nth-child(n+2):nth-last-child(n+2),
+         .leaderboard-container th:nth-child(n+2):nth-last-child(n+2) {
+         display: none; /* Hide everything except the first and last */
+         }
          .contact {
          flex-direction: column;
          align-items: center;
