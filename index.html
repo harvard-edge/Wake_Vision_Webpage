@@ -35,6 +35,69 @@
             justify-content: flex-end;
             min-width: 300px;
         }
+        
+        
+
+/* Leaderboard container with curved corners */
+.leaderboard-container {
+    max-width: 1200px; /* Restrict the width */
+    margin: 0 auto; /* Center the table */
+    overflow: hidden; /* Prevent content overflow from breaking curved corners */
+    border-radius: 10px; /* Apply rounded corners only to the container */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+    background-color: white; /* Ensure the container background is white */
+}
+
+/* Reset rows to have sharp corners */
+.leaderboard-container tr {
+    border-radius: 0 !important; /* Ensure rows/cells have no rounding */
+}
+
+/* Styling for the table */
+.leaderboard-container table {
+    width: 100%; /* Make the table fill the container */
+    border-collapse: collapse; /* Remove extra spacing */
+    border-spacing: 0; /* Ensure no gaps between table cells */
+    background-color: white; /* Keep the table's background white */
+}
+
+/* Table headers and cells */
+.leaderboard-container th,
+.leaderboard-container td {
+    padding: 10px 15px; /* Add spacing inside cells */
+    border-bottom: 1px solid #eee; /* Add subtle row dividers */
+    text-align: center; /* Center-align text */
+    background-color: white; /* Ensure all cells are white */
+}
+
+/* Styling for header cells */
+.leaderboard-container th {
+    background-color: #f9f9f9; /* Light gray for headers */
+    font-weight: bold;
+    border-bottom: 2px solid #ddd; /* Add a more pronounced divider under headers */
+}
+
+/* First and last cells in header rows for curved corners */
+.leaderboard-container th:first-child {
+    border-top-left-radius: 10px; /* Round top-left corner */
+}
+.leaderboard-container th:last-child {
+    border-top-right-radius: 10px; /* Round top-right corner */
+}
+
+/* First and last cells in the last row for bottom corners */
+.leaderboard-container tr:last-child td:first-child {
+    border-bottom-left-radius: 10px; /* Round bottom-left corner */
+}
+.leaderboard-container tr:last-child td:last-child {
+    border-bottom-right-radius: 10px; /* Round bottom-right corner */
+}
+
+
+
+
+
+
         @media (max-width: 768px) {
             .contact {
                 flex-direction: column;
@@ -276,9 +339,11 @@
             </div>
         </div>
                 <h2></h2>
-        <h2 class="fade-in">Leaderboard</h2>
-        <p class="fade-in">
-            <table width="80%" style="margin: 0 auto; border:0px solid;text-align:center">
+                <a class="anchor" id="leaderboard"></a>
+                <h2 class="fade-in">Leaderboard</h2>
+                <div class="leaderboard-wrapper fade-in">
+                    <div class="leaderboard-container">
+                        <table width="80%" style="margin: 0 auto; border:0px solid;text-align:center">
                 <thead>
                     <tr>
                         <th align="center">Model Name (.tflite)</th>
@@ -372,7 +437,9 @@
                     </tr>
                 </tbody>
             </table>
-        </p>
+        </div>
+    </div>    
+    </p>
         <div class="feature-grid">
             <div class="feature-item fade-in">
                 <h3>Contribute</h3>
