@@ -545,14 +545,3 @@ footer {
 		margin-bottom: 20px;
 	}
 }
-
-/* General Styles for Large Screens */
-@media (min-width: 1150px) {
-	header {
-		position: sticky;
-		top: 0;
-	}
-	.anchor {
-		top: -200px;
-	}
-}
