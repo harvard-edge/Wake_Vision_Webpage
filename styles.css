@@ -59,10 +59,11 @@ footer {
 .image-item {
 	position: relative;
 	width: 100%;
-	padding-top: 66.66%;
-	/* Aspect ratio of 3:2 */
+	padding-top: 66.66%; /* Aspect ratio of 3:2 */
 	overflow: hidden;
+	background-color: #000; /* Optional: Set background to prevent white space visibility */
 }
+
 .image-item img {
 	position: absolute;
 	top: 0;
@@ -70,7 +71,8 @@ footer {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	/* Ensures the image covers the area without distorting the aspect ratio */
+	/* Add the following rule to prevent white space */
+	min-height: 100%; /* Ensures the image always fills vertically */
 }
 .image-item p {
 	position: absolute;
@@ -82,6 +84,10 @@ footer {
 	font-size: 1em;
 	text-align: center;
 	margin: 0;
+}
+.image-item:hover img {
+	transform: scale(1.05); /* Slight zoom on hover */
+	transition: transform 0.3s ease;
 }
 #featured-image img {
 	width: 100%;
@@ -516,7 +522,10 @@ footer {
 		grid-template-columns: 1fr;
 	}
 	.image-item {
-		padding-top: 75%; /* Adjust aspect ratio padding for smaller screens if necessary */
+		padding-top: 75%; /* Adjust aspect ratio for smaller screens if needed */
+	}
+	.image-item img {
+		object-fit: cover; /* Optional: Change to 'contain' for smaller screens */
 	}
 
 	/* About Section Heading Adjustments */
@@ -543,5 +552,10 @@ footer {
 		justify-content: center;
 		text-align: center;
 		margin-bottom: 20px;
+	}
+}
+@media (max-width: 480px) {
+	.image-item {
+		padding-top: 100%; /* Change aspect ratio to 1:1 for very small screens */
 	}
 }
