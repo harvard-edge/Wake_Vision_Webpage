@@ -31,11 +31,12 @@ nav ul li a {
 	text-decoration: none;
 }
 header {
-    display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center;    /* Center content vertically */
-    padding: 20px;          /* Add some padding around the header */
-    background-color: #f4f4f4; /* Optional: background color for visibility */
+	background-color: #024959;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
 }
 /* Footer adjustments */
 footer {
