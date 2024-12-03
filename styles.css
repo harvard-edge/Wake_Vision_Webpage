@@ -1,5 +1,4 @@
 body {
-	font-family: Arial, sans-serif;
 	background-color: #f4f4f4;
 	margin-right: 120px;
 	margin-left: 120px;
@@ -243,7 +242,6 @@ body {
 	right: 5px;
 	top: 50%;
 	transform: translateY(-50%);
-	font-size: 12px;
 	transition: transform 0.3s ease;
 }
 .sortable:checked::after {
@@ -486,12 +484,10 @@ footer {
 	box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-
 /* General Styles for Small Screens */
 @media (max-width: 768px) {
 	/* Leaderboard Table Styles */
 	.leaderboard-container table {
-		font-size: 14px; /* Reduce font size for smaller screens */
 	}
 	.leaderboard-container th,
 	.leaderboard-container td {
@@ -536,7 +532,6 @@ footer {
 
 	/* Body Styles */
 	body {
-		font-family: Arial, sans-serif;
 		background-color: #f4f4f4;
 		margin: 10px 20px; /* Combined shorthand for top, right, bottom, and left margins */
 	}
