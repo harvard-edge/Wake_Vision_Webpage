@@ -282,114 +282,116 @@
          </div>
          <h2></h2>
          <h2 class="fade-in">Wake Vision Challenge 🏆</h2>
-         <p class="fade-in">
-             Following the release of the Wake Vision Dataset, the <a href="https://edgeai.modelnova.ai/challenges/details/1">Wake Vision Challenge</a> was launched to advance research in TinyML. Participants were invited to contribute innovative model architectures in the model-centric track or to improve the dataset through the data-centric track. This section reports the results of the challenge. By clicking on the author name visitors can access the submitted model, source code, and a report describing the adopted solution. This provides a foundation for those interested in pushing the boundaries of TinyML with the Wake Vision Dataset.
-<h3 id="model-centric-track">Model-Centric Track</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Author</th>
-<th>Model Name [.tflite]</th>
-<th>Flash [B]</th>
-<th>RAM [B]</th>
-<th>MACs</th>
-<th>Deployability</th>
-<th>Test Acc.</th>
-<th>Norm. Test Acc.</th>
-<th>Score</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1°</td>
-<td><a href="https://github.com/UtalTIPE/Wake_Vision_Challenge_Model_Centric_Track">ymac</a></td>
-<td>wv_k_8_c_5_sepconv</td>
-<td>9236</td>
-<td>20492</td>
-<td>431985</td>
-<td>1.0</td>
-<td>0.726798288002209</td>
-<td>0.8469608145634063</td>
-<td>0.8633991440011045</td>
-</tr>
-<tr>
-<td>2°</td>
-<td><a href="https://github.com/samy101/Wake_Vision_Challenge_Model_Centric_Track">samy</a></td>
-<td>wv_k_8_c_5_80_small</td>
-<td>25584</td>
-<td>23424</td>
-<td>5718046</td>
-<td>0.885452561091946</td>
-<td>0.7678862349855032</td>
-<td>1.0</td>
-<td>0.8266693980387246</td>
-</tr>
-<tr>
-<td>3°</td>
-<td><a href="https://github.com/Anasb73/Wake_Vision_Challenge_Model_Centric_Track">anas-benalla</a></td>
-<td>model_5K</td>
-<td>52712</td>
-<td>24808</td>
-<td>4899292</td>
-<td>0.8624280319006686</td>
-<td>0.7644622394035621</td>
-<td>0.9872467345469506</td>
-<td>0.8134451356521153</td>
-</tr>
-<tr>
-<td>4°</td>
-<td><a href="https://github.com/Mohammad-Hallaq/Wake_Vision_Challenge_Model_Centric_Track">mohammad_hallaq</a></td>
-<td>wv_k_8_c_5_v4</td>
-<td>55392</td>
-<td>61968</td>
-<td>3887331</td>
-<td>0.7986097171762788</td>
-<td>0.7525058677343642</td>
-<td>0.9427131543762214</td>
-<td>0.7755577924553215</td>
-</tr>
-<tr>
-<td>5°</td>
-<td><a href="https://github.com/Elios-Lab/Wake_Vision_Challenge_Model_Centric_Track">apighetti</a></td>
-<td>quant_aaaabh</td>
-<td>276872</td>
-<td>34480</td>
-<td>693818</td>
-<td>0.6331896220580955</td>
-<td>0.743642137235952</td>
-<td>0.9096986526792142</td>
-<td>0.6884158796470237</td>
-</tr>
-<tr>
-<td>6°</td>
-<td><a href="https://github.com/benx13/Wake_Vision_Challenge_Model_Centric_Track">benx13</a></td>
-<td>mcunet_tiny_int8</td>
-<td>42980</td>
-<td>48680</td>
-<td>1751060</td>
-<td>0.8773231889307195</td>
-<td>0.49940632334667956</td>
-<td>0.0</td>
-<td>0.6883647561386995</td>
-</tr>
-<tr>
-<td>7°</td>
-<td><a href="https://github.com/Toledo1/Wake_Vision_Challenge_Model_Centric_Track.git">cezar</a></td>
-<td>bestmodel</td>
-<td>24840</td>
-<td>180644</td>
-<td>20435868</td>
-<td>0.31389897721781335</td>
-<td>0.7530719315200883</td>
-<td>0.9448215571325722</td>
-<td>0.5334854543689509</td>
-</tr>
-</tbody>
-</table>
+         <p class="fade-in">Following the release of the Wake Vision Dataset, the <a href="https://edgeai.modelnova.ai/challenges/details/1">Wake Vision Challenge</a> was launched to advance research in TinyML. Participants were invited to contribute innovative model architectures in the model-centric track or to improve the dataset through the data-centric track. This section reports the results of the challenge. By clicking on the author name visitors can access the submitted model, source code, and a report describing the adopted solution. This provides a foundation for those interested in pushing the boundaries of TinyML with the Wake Vision Dataset.</p>
+         <h3 id="model-centric-track">Model-Centric Track</h3>
+         <div class="leaderboard-wrapper fade-in">
+            <div class="leaderboard-container">
+               <table width="80%" style="margin: 0 auto; border:0px solid;text-align:center">
+                  <thead>
+                     <tr>
+                        <th></th>
+                        <th>Author</th>
+                        <th>Model Name [.tflite]</th>
+                        <th>Flash [B]</th>
+                        <th>RAM [B]</th>
+                        <th>MACs</th>
+                        <th>Deployability</th>
+                        <th>Test Acc.</th>
+                        <th>Norm. Test Acc.</th>
+                        <th>Score</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>1°</td>
+                        <td><a href="https://github.com/UtalTIPE/Wake_Vision_Challenge_Model_Centric_Track">ymac</a></td>
+                        <td>wv_k_8_c_5_sepconv</td>
+                        <td>9236</td>
+                        <td>20492</td>
+                        <td>431985</td>
+                        <td>1.0</td>
+                        <td>0.726798288002209</td>
+                        <td>0.8469608145634063</td>
+                        <td>0.8633991440011045</td>
+                     </tr>
+                     <tr>
+                        <td>2°</td>
+                        <td><a href="https://github.com/samy101/Wake_Vision_Challenge_Model_Centric_Track">samy</a></td>
+                        <td>wv_k_8_c_5_80_small</td>
+                        <td>25584</td>
+                        <td>23424</td>
+                        <td>5718046</td>
+                        <td>0.885452561091946</td>
+                        <td>0.7678862349855032</td>
+                        <td>1.0</td>
+                        <td>0.8266693980387246</td>
+                     </tr>
+                     <tr>
+                        <td>3°</td>
+                        <td><a href="https://github.com/Anasb73/Wake_Vision_Challenge_Model_Centric_Track">anas-benalla</a></td>
+                        <td>model_5K</td>
+                        <td>52712</td>
+                        <td>24808</td>
+                        <td>4899292</td>
+                        <td>0.8624280319006686</td>
+                        <td>0.7644622394035621</td>
+                        <td>0.9872467345469506</td>
+                        <td>0.8134451356521153</td>
+                     </tr>
+                     <tr><td>4°</td>
+                        <td><a href="https://github.com/Mohammad-Hallaq/Wake_Vision_Challenge_Model_Centric_Track">mohammad_hallaq</a></td>
+                        <td>wv_k_8_c_5_v4</td>
+                        <td>55392</td>
+                        <td>61968</td>
+                        <td>3887331</td>
+                        <td>0.7986097171762788</td>
+                        <td>0.7525058677343642</td>
+                        <td>0.9427131543762214</td>
+                        <td>0.7755577924553215</td>
+                     </tr>
+                     <tr>
+                        <td>5°</td>
+                        <td><a href="https://github.com/Elios-Lab/Wake_Vision_Challenge_Model_Centric_Track">apighetti</a></td>
+                        <td>quant_aaaabh</td>
+                        <td>276872</td>
+                        <td>34480</td>
+                        <td>693818</td>
+                        <td>0.6331896220580955</td>
+                        <td>0.743642137235952</td>
+                        <td>0.9096986526792142</td>
+                        <td>0.6884158796470237</td>
+                     </tr>
+                     <tr>
+                        <td>6°</td>
+                        <td><a href="https://github.com/benx13/Wake_Vision_Challenge_Model_Centric_Track">benx13</a></td>
+                        <td>mcunet_tiny_int8</td>
+                        <td>42980</td>
+                        <td>48680</td>
+                        <td>1751060</td>
+                        <td>0.8773231889307195</td>
+                        <td>0.49940632334667956</td>
+                        <td>0.0</td>
+                        <td>0.6883647561386995</td>
+                     </tr>
+                     <tr>
+                        <td>7°</td>
+                        <td><a href="https://github.com/Toledo1/Wake_Vision_Challenge_Model_Centric_Track.git">cezar</a></td><td>bestmodel</td>
+                        <td>24840</td>                        
+                        <td>180644</td>
+                        <td>20435868</td>
+                        <td>0.31389897721781335</td>
+                        <td>0.7530719315200883</td>
+                        <td>0.9448215571325722</td>
+                        <td>0.5334854543689509</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+               
+               
 <h3 id="data-centric-track">Data-Centric Track</h3>
-<table>
-<thead>
+<table width="80%" style="margin: 0 auto; border:0px solid;text-align:center"><thead>
 <tr>
 <th></th>
 <th>Author</th>
