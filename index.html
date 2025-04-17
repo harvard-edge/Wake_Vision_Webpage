@@ -8,7 +8,7 @@
    </head>
    <script>
       document.addEventListener("DOMContentLoaded", () => {
-         const table = document.querySelector(".modelzoo-container table");
+         const table = document.querySelector(".leaderboard-container table");
          const headers = table.querySelectorAll("thead th");
          const tbody = table.querySelector("tbody");
       
@@ -89,8 +89,6 @@
          rows.forEach(row => tbody.appendChild(row)); // Re-append sorted rows
          defaultSortHeader.querySelector(".arrow").textContent = "▼"; // Set descending arrow
       });
-   </script>
-   <script>
       document.addEventListener("DOMContentLoaded", () => {
          const table = document.querySelector(".leaderboard-container table");
          const headers = table.querySelectorAll("thead th");
@@ -250,7 +248,7 @@
          <a class="anchor" id="model_zoo"></a>
          <h2 class="fade-in">Model Zoo</h2>
          <div class="leaderboard-wrapper fade-in">
-            <div class="modelzoo-container">
+            <div class="leaderboard-container">
                <table width="80%" style="margin: 0 auto; border:0px solid;text-align:center">
                   <thead>
                      <tr>
