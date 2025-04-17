@@ -8,6 +8,90 @@
    </head>
    <script>
       document.addEventListener("DOMContentLoaded", () => {
+         const table = document.querySelector(".modelzoo-container table");
+         const headers = table.querySelectorAll("thead th");
+         const tbody = table.querySelector("tbody");
+      
+         const defaultSortColumnIndex = 5; // Index of the "Test Accuracy" column
+      
+         headers.forEach((header, index) => {
+            // Create arrow span once for each header
+            const arrow = document.createElement("span");
+            arrow.classList.add("arrow");
+            header.appendChild(arrow);
+      
+            header.addEventListener("click", () => {
+               const isAscending = header.classList.toggle("sorted-asc");
+               header.classList.toggle("sorted-desc", !isAscending);
+      
+               // Update arrow directions for all headers
+               headers.forEach((h, i) => {
+                  const hArrow = h.querySelector(".arrow");
+                  if (i !== index) {
+                     h.classList.remove("sorted-asc", "sorted-desc");
+                     hArrow.textContent = ""; // Clear arrow for non-sorted columns
+                  } else {
+                     hArrow.textContent = isAscending ? "▲" : "▼"; // Set arrow direction
+                  }
+               });
+      
+               const rows = Array.from(tbody.querySelectorAll("tr"));
+               const compare = (rowA, rowB) => {
+                  const cellA = rowA.children[index].textContent.trim();
+                  const cellB = rowB.children[index].textContent.trim();
+      
+                  const valueA = parseCellValue(cellA);
+                  const valueB = parseCellValue(cellB);
+      
+                  if (valueA < valueB) return isAscending ? -1 : 1;
+                  if (valueA > valueB) return isAscending ? 1 : -1;
+                  return 0;
+               };
+      
+               rows.sort(compare);
+               rows.forEach(row => tbody.appendChild(row)); // Re-append sorted rows
+            });
+         });
+      
+         // Helper function to parse cell values
+         const parseCellValue = (value) => {
+            // Handle percentages
+            if (value.includes('%')) {
+               return parseFloat(value.replace(/[^\d.-]/g, ''));
+            }
+      
+            // Handle numbers with commas
+            if (value.includes(',')) {
+               return parseFloat(value.replace(/,/g, ''));
+            }
+      
+            // Default to text if not numeric
+            return isNaN(value) ? value.toLowerCase() : parseFloat(value);
+         };
+      
+         // Trigger default sorting by "Test Accuracy" in descending order
+         const defaultSortHeader = headers[defaultSortColumnIndex];
+         defaultSortHeader.classList.add("sorted-desc"); // Add descending class
+         const rows = Array.from(tbody.querySelectorAll("tr"));
+         const compare = (rowA, rowB) => {
+            const cellA = rowA.children[defaultSortColumnIndex].textContent.trim();
+            const cellB = rowB.children[defaultSortColumnIndex].textContent.trim();
+      
+            const valueA = parseCellValue(cellA);
+            const valueB = parseCellValue(cellB);
+      
+            if (valueA < valueB) return 1; // Reverse logic for descending
+            if (valueA > valueB) return -1;
+            return 0;
+         };
+      
+         rows.sort(compare);
+         rows.forEach(row => tbody.appendChild(row)); // Re-append sorted rows
+         defaultSortHeader.querySelector(".arrow").textContent = "▼"; // Set descending arrow
+      });
+   </script>
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
          const table = document.querySelector(".leaderboard-container table");
          const headers = table.querySelectorAll("thead th");
          const tbody = table.querySelector("tbody");
@@ -163,10 +247,10 @@
             </div>
          </div>
          <h2></h2>
-         <a class="anchor" id="leaderboard"></a>
+         <a class="anchor" id="model_zoo"></a>
          <h2 class="fade-in">Model Zoo</h2>
          <div class="leaderboard-wrapper fade-in">
-            <div class="leaderboard-container">
+            <div class="modelzoo-container">
                <table width="80%" style="margin: 0 auto; border:0px solid;text-align:center">
                   <thead>
                      <tr>
