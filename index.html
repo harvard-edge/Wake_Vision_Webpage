@@ -164,7 +164,7 @@
          </div>
          <h2></h2>
          <a class="anchor" id="leaderboard"></a>
-         <h2 class="fade-in">Leaderboard</h2>
+         <h2 class="fade-in">Model Zoo</h2>
          <div class="leaderboard-wrapper fade-in">
             <div class="leaderboard-container">
                <table width="80%" style="margin: 0 auto; border:0px solid;text-align:center">
@@ -269,69 +269,6 @@
                         <td align="center">71.7%</td><!--Accuracy for model zoo-->
                         <!--<td align="center">70.6±0.96%</td>--><!--Numbers from paper-->
                      </tr>
-                     <tr>
-                        <td align="center"><a href="https://github.com/UtalTIPE/Wake_Vision_Challenge_Model_Centric_Track">ymac</a></td>
-                        <td align="center">(50,50,3)</td>
-                        <td align="center">34.5</td>
-                        <td align="center">27.77</td>
-                        <td align="center">431,985</td>
-                        <!--<td align="center">77.2%</td>--><!--Accuracy for model zoo-->
-                        <td align="center">76.7±0.51%</td><!--Numbers from paper-->
-                     </tr>
-                     <tr>
-                        <td align="center"><a href="https://github.com/samy101/Wake_Vision_Challenge_Model_Centric_Track">samy</a></td>
-                        <td align="center">(80,80,3)</td>
-                        <td align="center">73.5</td>
-                        <td align="center">34.55</td>
-                        <td align="center">5,718,046</td>
-                        <!--<td align="center">79.9%</td>--><!--Accuracy for model zoo-->
-                        <td align="center">79.5±0.61%</td><!--Numbers from paper-->
-                     </tr>
-                     <tr>
-                        <td align="center"><a href="https://github.com/Anasb73/Wake_Vision_Challenge_Model_Centric_Track">anas-benalla</a></td>
-                        <td align="center">(50,50,3)</td>
-                        <td align="center">48.5</td>
-                        <td align="center">104.55</td>
-                        <td align="center">4,899,292</td>
-                        <!--<td align="center">78%</td>--><!--Accuracy for model zoo-->
-                        <td align="center">79.7±0.28%</td><!--Numbers from paper-->
-                     </tr>
-                     <tr>
-                        <td align="center"><a href="https://github.com/Mohammad-Hallaq/Wake_Vision_Challenge_Model_Centric_Track">mohammad_hallaq</a></td>
-                        <td align="center">(80,80,3)</td>
-                        <td align="center">129.5</td>
-                        <td align="center">128.32</td>
-                        <td align="center">3,887,331</td>
-                        <!--<td align="center">77.8%</td>--><!--Accuracy for model zoo-->
-                        <td align="center">77.3±0.5%</td><!--Numbers from paper-->
-                     </tr>
-                     <tr>
-                        <td align="center"><a href="https://github.com/Elios-Lab/Wake_Vision_Challenge_Model_Centric_Track">apighetti</a></td>
-                        <td align="center">(50,50,3)</td>
-                        <td align="center">48.5</td>
-                        <td align="center">278.36</td>
-                        <td align="center">693,818</td>
-                        <!--<td align="center">74.5%</td>--><!--Accuracy for model zoo-->
-                        <td align="center">74.3±0.22%</td><!--Numbers from paper-->
-                     </tr>
-                     <tr>
-                        <td align="center"><a href="https://github.com/benx13/Wake_Vision_Challenge_Model_Centric_Track">benx13</a></td>
-                        <td align="center">(48,48,3)</td>
-                        <td align="center">63.5</td>
-                        <td align="center">94.95</td>
-                        <td align="center">1,693,474</td>
-                        <!--<td align="center">79.9%</td>--><!--Accuracy for model zoo-->
-                        <td align="center">79.6±0.22%</td><!--Numbers from paper-->
-                     </tr>
-                     <tr>
-                        <td align="center"><a href="https://github.com/Toledo1/Wake_Vision_Challenge_Model_Centric_Track.git">cezar</a></td>
-                        <td align="center">(50,50,3)</td>
-                        <td align="center">245.5</td>
-                        <td align="center">57.23</td>
-                        <td align="center">20,435,868</td>
-                        <!--<td align="center">79.4%</td>--><!--Accuracy for model zoo-->
-                        <td align="center">79.0±0.42%</td><!--Numbers from paper-->
-                     </tr>
                   </tbody>
                </table>
             </div>
@@ -363,106 +300,83 @@
                <table width="80%" style="margin: 0 auto; border:0px solid;text-align:center">
                   <thead>
                      <tr>
-                        <th></th>
-                        <th>Author</th>
-                        <th>Model Name [.tflite]</th>
-                        <th>Flash [B]</th>
-                        <th>RAM [B]</th>
+                        <th>Model Name</th>
+                        <th>Input Size</th>
+                        <th>RAM (KiB)</th>
+                        <th>Flash (KiB)</th>
                         <th>MACs</th>
-                        <th>Deployability</th>
-                        <th>Test Acc.</th>
-                        <th>Norm. Test Acc.</th>
-                        <th>Score</th>
+                        <th>Test Accuracy</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
-                        <td>1°</td>
-                        <td><a href="https://github.com/UtalTIPE/Wake_Vision_Challenge_Model_Centric_Track">ymac</a></td>
-                        <td>wv_k_8_c_5_sepconv</td>
-                        <td>9236</td>
-                        <td>20492</td>
-                        <td>431985</td>
-                        <td>1.0</td>
-                        <td>0.726798288002209</td>
-                        <td>0.8469608145634063</td>
-                        <td>0.8633991440011045</td>
+                        <td align="center"><a href="https://github.com/harvard-edge/Wake_Vision/blob/main/model_zoo/wv_quality_ymac.tflite">ymac</a> (<a href="https://github.com/UtalTIPE/Wake_Vision_Challenge_Model_Centric_Track">GitHub</a>)</td>
+                        <td align="center">(50,50,3)</td>
+                        <td align="center">34.5</td>
+                        <td align="center">27.77</td>
+                        <td align="center">431,985</td>
+                        <td align="center">77.2%</td><!--Accuracy for model zoo-->
+                        <!--<td align="center">76.7±0.51%</td>--><!--Numbers from paper-->
                      </tr>
                      <tr>
-                        <td>2°</td>
-                        <td><a href="https://github.com/samy101/Wake_Vision_Challenge_Model_Centric_Track">samy</a></td>
-                        <td>wv_k_8_c_5_80_small</td>
-                        <td>25584</td>
-                        <td>23424</td>
-                        <td>5718046</td>
-                        <td>0.885452561091946</td>
-                        <td>0.7678862349855032</td>
-                        <td>1.0</td>
-                        <td>0.8266693980387246</td>
+                        <td align="center"><a href="https://github.com/harvard-edge/Wake_Vision/blob/main/model_zoo/wv_quality_samy.tflite">samy</a> (<a href="https://github.com/samy101/Wake_Vision_Challenge_Model_Centric_Track">GitHub</a>)</td>
+                        <td align="center">(80,80,3)</td>
+                        <td align="center">73.5</td>
+                        <td align="center">34.55</td>
+                        <td align="center">5,718,046</td>
+                        <td align="center">79.9%</td><!--Accuracy for model zoo-->
+                        <!--<td align="center">79.5±0.61%</td>--><!--Numbers from paper-->
                      </tr>
                      <tr>
-                        <td>3°</td>
-                        <td><a href="https://github.com/Anasb73/Wake_Vision_Challenge_Model_Centric_Track">anas-benalla</a></td>
-                        <td>model_5K</td>
-                        <td>52712</td>
-                        <td>24808</td>
-                        <td>4899292</td>
-                        <td>0.8624280319006686</td>
-                        <td>0.7644622394035621</td>
-                        <td>0.9872467345469506</td>
-                        <td>0.8134451356521153</td>
-                     </tr>
-                     <tr><td>4°</td>
-                        <td><a href="https://github.com/Mohammad-Hallaq/Wake_Vision_Challenge_Model_Centric_Track">mohammad_hallaq</a></td>
-                        <td>wv_k_8_c_5_v4</td>
-                        <td>55392</td>
-                        <td>61968</td>
-                        <td>3887331</td>
-                        <td>0.7986097171762788</td>
-                        <td>0.7525058677343642</td>
-                        <td>0.9427131543762214</td>
-                        <td>0.7755577924553215</td>
+                        <td align="center"><a href="https://github.com/harvard-edge/Wake_Vision/blob/main/model_zoo/wv_quality_anas_benalla.tflite">anas-benalla</a> (<a href="https://github.com/Anasb73/Wake_Vision_Challenge_Model_Centric_Track">GitHub</a>)</td>
+                        <td align="center">(50,50,3)</td>
+                        <td align="center">48.5</td>
+                        <td align="center">104.55</td>
+                        <td align="center">4,899,292</td>
+                        <td align="center">80%</td><!--Accuracy for model zoo-->
+                        <!--<td align="center">79.7±0.28%</td>--><!--Numbers from paper-->
                      </tr>
                      <tr>
-                        <td>5°</td>
-                        <td><a href="https://github.com/Elios-Lab/Wake_Vision_Challenge_Model_Centric_Track">apighetti</a></td>
-                        <td>quant_aaaabh</td>
-                        <td>276872</td>
-                        <td>34480</td>
-                        <td>693818</td>
-                        <td>0.6331896220580955</td>
-                        <td>0.743642137235952</td>
-                        <td>0.9096986526792142</td>
-                        <td>0.6884158796470237</td>
+                        <td align="center"><a href="https://github.com/harvard-edge/Wake_Vision/blob/main/model_zoo/wv_quality_mohammad_hallaq.tflite">mohammad_hallaq</a> (<a href="https://github.com/Mohammad-Hallaq/Wake_Vision_Challenge_Model_Centric_Track">GitHub</a>)</td>
+                        <td align="center">(80,80,3)</td>
+                        <td align="center">129.5</td>
+                        <td align="center">128.32</td>
+                        <td align="center">3,887,331</td>
+                        <td align="center">77.8%</td><!--Accuracy for model zoo-->
+                        <!--<td align="center">77.3±0.5%</td>--><!--Numbers from paper-->
                      </tr>
                      <tr>
-                        <td>6°</td>
-                        <td><a href="https://github.com/benx13/Wake_Vision_Challenge_Model_Centric_Track">benx13</a></td>
-                        <td>mcunet_tiny_int8</td>
-                        <td>42980</td>
-                        <td>48680</td>
-                        <td>1751060</td>
-                        <td>0.8773231889307195</td>
-                        <td>0.49940632334667956</td>
-                        <td>0.0</td>
-                        <td>0.6883647561386995</td>
+                        <td align="center"><a href="https://github.com/harvard-edge/Wake_Vision/blob/main/model_zoo/wv_quality_apighetti.tflite">apighetti</a> (<a href="https://github.com/Elios-Lab/Wake_Vision_Challenge_Model_Centric_Track">GitHub</a>)</td>
+                        <td align="center">(50,50,3)</td>
+                        <td align="center">48.5</td>
+                        <td align="center">278.36</td>
+                        <td align="center">693,818</td>
+                        <td align="center">74.5%</td><!--Accuracy for model zoo-->
+                        <!--<td align="center">74.3±0.22%</td>--><!--Numbers from paper-->
                      </tr>
                      <tr>
-                        <td>7°</td>
-                        <td><a href="https://github.com/Toledo1/Wake_Vision_Challenge_Model_Centric_Track.git">cezar</a></td><td>bestmodel</td>
-                        <td>24840</td>                        
-                        <td>180644</td>
-                        <td>20435868</td>
-                        <td>0.31389897721781335</td>
-                        <td>0.7530719315200883</td>
-                        <td>0.9448215571325722</td>
-                        <td>0.5334854543689509</td>
+                        <td align="center"><a href="https://github.com/harvard-edge/Wake_Vision/blob/main/model_zoo/wv_quality_benx13.tflite">benx13</a> (<a href="https://github.com/benx13/Wake_Vision_Challenge_Model_Centric_Track">GitHub</a>)</td>
+                        <td align="center">(48,48,3)</td>
+                        <td align="center">63.5</td>
+                        <td align="center">94.95</td>
+                        <td align="center">1,693,474</td>
+                        <td align="center">79.9%</td><!--Accuracy for model zoo-->
+                        <!--<td align="center">79.6±0.22%</td>--><!--Numbers from paper-->
+                     </tr>
+                     <tr>
+                        <td align="center"><a href="https://github.com/harvard-edge/Wake_Vision/blob/main/model_zoo/wv_quality_cezar.tflite">cezar</a> (<a href="https://github.com/Toledo1/Wake_Vision_Challenge_Model_Centric_Track.git">GitHub</a>)</td>
+                        <td align="center">(50,50,3)</td>
+                        <td align="center">245.5</td>
+                        <td align="center">57.23</td>
+                        <td align="center">20,435,868</td>
+                        <td align="center">79.5%</td><!--Accuracy for model zoo-->
+                        <!--<td align="center">79.0±0.42%</td>--><!--Numbers from paper-->
                      </tr>
                   </tbody>
                </table>
             </div>
          </div>
-         
+         </p>
          <h3 id="data-centric-track">Data-Centric Track</h3>
          <div class="leaderboard-wrapper fade-in">
             <div class="leaderboard-container">
